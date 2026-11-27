@@ -1,0 +1,5 @@
+SELECT productCode,
+       quantityOrdered,
+       SUM(quantityOrdered * priceEach) AS total_price
+FROM orderdetails
+GROUP BY productCode, quantityOrdered;
